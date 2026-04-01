@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Gym Planner</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container mt-5 d-flex justify-content-center">
+
+    <div class="container-box col-md-6">
+
+        <h2 class="mb-4 text-center">🔥 AI Gym Planner</h2>
+
+        <!-- 🔥 MAIN FORM -->
+        <form method="POST" action="/result">
+
+            <input type="number" name="age" placeholder="Age" required>
+
+            <input type="number" name="weight" placeholder="Weight (kg)" required>
+
+            <input type="number" name="height" placeholder="Height (cm)" required>
+
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <select name="goal" required>
+                <option value="">Select Goal</option>
+                <option value="bulking">Muscle Gain</option>
+                <option value="cutting">Fat Loss</option>
+                <option value="maintenance">Maintain</option>
+            </select>
+
+            <select name="bodypart" required>
+                <option value="">Select Body Focus</option>
+                <option value="full">Full Body</option>
+                <option value="chest">Chest</option>
+                <option value="back">Back</option>
+                <option value="legs">Legs</option>
+                <option value="shoulders">Shoulders</option>
+                <option value="arms">Arms</option>
+                <option value="core">Core</option>
+            </select>
+
+            <button type="submit">🚀 Generate Plan</button>
+
+        </form>
+
+        <hr>
+
+        <!-- 🔥 PROGRESS TRACKING -->
+        <h4 class="text-center">📊 Update Progress</h4>
+
+        <form action="/save_progress" method="post">
+            <input type="number" name="weight" placeholder="Enter current weight" required>
+            <button type="submit">Save Progress</button>
+        </form>
+
+        <hr>
+
+        <!-- 🔥 LOGOUT -->
+        <a href="/logout">
+            <button>Logout 🔐</button>
+            </a>
+            
+            <a href="/chat">
+    <button>🤖 Chat with AI Trainer</button>
+</a>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Gym Trainer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background: linear-gradient(rgba(148, 116, 116, 0.75), rgba(0,0,0,0.85)),
+            url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .title{
+            font-size:70px;
+            font-weight:bold;
+            text-shadow:0 0 30px #ff416c;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            font-size:30px;
+            margin-top:10px;
+            opacity:0.9;
+            letter-spacing:1px;
+        }
+
+        .btn-group{
+            margin-top:40px;
+        }
+
+        .custom-btn{
+            display:inline-block;
+            padding:15px 35px;
+            font-size:20px;
+            border-radius:12px;
+            margin:12px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .login-btn{
+            background: linear-gradient(45deg,#ff4b2b,#ff416c);
+            color:white;
+            box-shadow:0 0 20px #ff416c;
+        }
+
+        .login-btn:hover{
+            transform:scale(1.1);
+            box-shadow:0 0 35px #ff416c;
+        }
+
+        .signup-btn{
+            border:2px solid white;
+            color:white;
+        }
+
+        .signup-btn:hover{
+            background:white;
+            color:black;
+            transform:scale(1.1);
+        }
+
+        /* 🔥 Animation */
+        @keyframes fadeIn {
+            from {opacity:0; transform: translateY(20px);}
+            to {opacity:1; transform: translateY(0);}
+        }
+    </style>
+
+</head>
+
+<body class="text-white">
+
+<div class="hero">
+
+    <h1 class="title">🔥 VIRTUAL GYM TRAINER 🔥</h1>
+
+    <p class="subtitle">
+        Train Smart • Build Strength • Transform Yourself
+    </p>
+
+    <div class="btn-group">
+        <a href="/login" class="custom-btn login-btn">Login 🔐</a>
+        <a href="/signup" class="custom-btn signup-btn">Create Account 🚀</a>
+    </div>
+
+</div>
+
+</body>
+</html>

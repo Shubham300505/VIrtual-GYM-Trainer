@@ -1,0 +1,132 @@
+/* 🔥 GLOBAL STYLE */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* 🔥 GLASS CARD */
+.container-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 65, 108, 0.4);
+    transition: 0.3s;
+}
+
+.container-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 60px rgba(255, 65, 108, 0.6);
+}
+
+/* 🔥 HEADINGS */
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ff416c;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+/* 🔥 INPUTS */
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ff416c;
+}
+
+/* 🔥 BUTTONS */
+button {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff416c;
+}
+
+/* 🔥 SMALL TEXT */
+p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* 🔥 LISTS */
+li {
+    font-size: 15px;
+    margin: 5px 0;    /* 🔥 FIX LINK COLORS */
+}
+    a {
+    text-decoration: none;
+    color: white !important;
+}
+
+/* 🔥 BUTTON-LIKE LINKS */
+a.btn-link-custom {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* 🔥 LOGIN BUTTON */
+.login-btn {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 0 15px #ff416c;
+}
+
+.login-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ff416c;
+}
+
+/* 🔥 SIGNUP BUTTON */
+.signup-btn {
+    border: 2px solid white;
+    background: transparent;
+}
+
+.signup-btn:hover {
+    background: white;
+    color: black !important;
+    transform: scale(1.1);
+}
+
+
+/* 🔥 ANIMATION */
+.container-box {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
